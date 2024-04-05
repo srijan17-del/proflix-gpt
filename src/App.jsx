@@ -2,12 +2,7 @@
 import Body from "./components/Body";
 import appStore from "./utils/appStore";
 import { Provider } from "react-redux";
-import { useEffect } from "react";
-import { auth } from "./firebase";
-import { onAuthStateChanged } from "firebase/auth";
-import { useDispatch } from "react-redux";
-import { addUser, removeUser } from "./utils/userSlice";
-import { useNavigate } from "react-router-dom";
+
 // import Header from "./components/Header";
 function App() {
   // useEffect(() => {
