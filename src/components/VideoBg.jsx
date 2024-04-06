@@ -9,16 +9,15 @@ const VideoBg = ({ id, adult }) => {
   if (!trailer.movieTrailer) return;
 
   const movieTrailer = trailer.movieTrailer;
-  console.log(movieTrailer);
+
   if (adult == true) {
     setMovieAudience("A");
   }
 
-  console.log(movieAudience);
   return (
-    <div className="w-full h-screen  overflow-hidden">
+    <div className="w-full h-[130vh] overflow-hidden">
       <iframe
-        className="w-full h-fit aspect-video -mt-[4.5rem] overflow-hidden "
+        className="w-full aspect-video relative scale-y-[1.33] scale-x-125 "
         src={
           "https://www.youtube.com/embed/" +
           movieTrailer.key +
@@ -31,7 +30,7 @@ const VideoBg = ({ id, adult }) => {
         frameBorder="0"
         allowFullScreen
       ></iframe>
-      <div className="absolute right-0 bottom-40 bg-black/35 py-2 pl-2 pr-10 border-l-2 border-white text-white">
+      <div className="absolute right-0 top-[22rem] bg-black/35 py-2 pl-2 pr-10 border-l-2 border-white text-white">
         {movieAudience}
       </div>
     </div>

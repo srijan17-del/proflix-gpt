@@ -52,9 +52,9 @@ const Header = () => {
   return (
     <div>
       {userProfile ? (
-        <div className="flex absolute ">
-          <div className="w-screen px-8 py-2 h-[5rem] bg-gradient-to-b from-[#0B0B0B] flex justify-between items-center">
-            <img src={Logo} alt="logo" className="w-[10rem] ml-14 " />
+        <div className="flex absolute z-10  box-border">
+          <div className=" w-screen box-border pl-5 py-2 h-[5rem] bg-gradient-to-b from-[#0B0B0B] flex items-center justify-between -ml-[1.2rem] ">
+            <img src={Logo} alt="logo" className="w-[10rem] ml-14 mt-5  " />
 
             <Menu as={"div"}>
               <div className="">
@@ -62,20 +62,20 @@ const Header = () => {
                   <img
                     src="https://occ-0-6245-2186.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTZ2zlLdBVC05fsd2YQAR43J6vB1NAUBOOrxt7oaFATxMhtdzlNZ846H3D8TZzooe2-FT853YVYs8p001KVFYopWi4D4NXM.png?r=229"
                     alt=""
-                    className="w-9 rounded mr-7 "
+                    className="w-9 rounded box-border mr-20 mt-5"
                   />
                 </Menu.Button>
                 <Transition
                   enter="transition duration-100 ease-out"
                   enterFrom="transform scale-95 opacity-0"
                   enterTo="transform scale-100 opacity-100"
-                  leave="transition duration-75 ease-out"
+                  leave="transition duration-150 ease-out"
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
                   <Menu.Items>
                     <TiArrowSortedUp
-                      className="text-black  absolute right-[4rem] top-12 mt-[0.65rem] "
+                      className="text-black  absolute right-[5rem] top-12 mt-[0.65rem] "
                       size={"1.8rem"}
                     />
                     <div className="w-40 h-auto pt-4  pb-2 px-2 mt-[1.8rem] bg-black absolute right-[3rem] top-12 opacity-80">

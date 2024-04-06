@@ -63,7 +63,7 @@ const Login = () => {
             // Signed up
             const user = userCredential.user;
             // user.displayName = values.firstName + " " + values.lastName;
-            console.log(user);
+
             updateProfile(user, {
               displayName: values.firstName + " " + values.lastName,
             })

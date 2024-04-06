@@ -8,17 +8,16 @@ const useNowPlayingMovies = () => {
 
   const getNowPlayingMovies = async () => {
     const data = await fetch(
-      "https://api.themoviedb.org/3/movie/now_playing?page=1/",
+      "https://api.themoviedb.org/3/movie/now_playing",
       api_options
     );
     const json = await data.json();
 
-    // console.log(json);
     dispatch(addNowPlayingMovies(json.results));
-    // console.log(json.results);
+
     const index = Math.floor(Math.random() * 19);
     const movie = json.results[index];
-    console.log(movie);
+
     dispatch(addMovie(movie));
   };
 

@@ -4,7 +4,7 @@ import ShowMoreText from "react-show-more-text";
 
 const VideoTitle = ({ title, overview }) => {
   return (
-    <div className="w-[30rem] left-16 top-72  absolute aspect-video  ">
+    <div className="w-[30rem] left-7 top-[15rem]  absolute aspect-video  ">
       <h1 className="text-3xl font-bold text-shadow-lg shadow-black/65 text-white">
         {title}
       </h1>
