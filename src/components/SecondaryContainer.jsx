@@ -12,7 +12,7 @@ const SecondaryContainer = () => {
   const upcomingMovies = movies.upcomingMovies;
 
   return (
-    <div className="bg-[#141414] w-full absolute z-40 ">
+    <div className="bg-[#141414] w-full absolute z-30">
       <div
         className="w-full h-[10rem] bg-gradient-to-t from-[#141414] absolute -z-10 
       -mt-[10rem] "
