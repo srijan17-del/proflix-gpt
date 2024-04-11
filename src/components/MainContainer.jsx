@@ -5,6 +5,7 @@ import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 import usePopularMovies from "../hooks/usePopularMovies";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
 import useUpcomingMovies from "../hooks/useUpcomingMovies";
+// import useMovieTrailer from "../hooks/useMovieTrailer";
 
 const MainContainer = () => {
   useNowPlayingMovies();
@@ -13,6 +14,7 @@ const MainContainer = () => {
   useUpcomingMovies();
 
   const movie = useSelector((store) => store.movie);
+
   if (movie.nowPlayingMovies == null) return;
 
   const { original_title, overview, id, adult } = movie.mainMovie;

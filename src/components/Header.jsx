@@ -14,6 +14,7 @@ import { toggleGptSearch } from "../utils/gptSlice";
 import { IoCloseOutline } from "react-icons/io5";
 import { SUPP_LANG } from "../utils/constants";
 import { changeLanguage } from "../utils/configSlice";
+import { lang } from "../utils/LanguageConstants";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ const Header = () => {
   // const name = useSelector(store => store.user.displayName);
   const userProfile = useSelector((store) => store.user);
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
+  const language = useSelector((store) => store.config.lang);
 
   const handleSignOut = () => {
     signOut(auth)
@@ -84,6 +86,7 @@ const Header = () => {
           }`}
           >
             <img src={Logo} alt="logo" className="w-[10rem] ml-14 mt-5  " />
+
             <RiOpenaiFill
               className="peer text-white z-20 absolute right-44 top-7 cursor-pointer hover:animate-pulse  text-shadow-lg active:text-red-800 duration-300"
               size={"2.5rem"}
@@ -91,14 +94,16 @@ const Header = () => {
                 dispatch(toggleGptSearch(true));
               }}
             />
+
             <button
               className=" absolute opacity-0 z-10 right-36 top-[2rem] border-y-[3px] border-l-[3px] py-1 pr-2 pl-1 text-white peer-hover:-translate-x-16
             peer-hover:opacity-100 duration-100 ease-in-out text-shadow-lg shadow-lg text-sm font-medium tracking-wider border-red-800 flex items-center gap-1
             "
             >
               {showGptSearch ? <IoCloseOutline size={"1.2rem"} /> : null}
-              {showGptSearch ? "close" : "GPT search"}
+              {showGptSearch ? `${lang[language].gptBtn}` : "GPT search"}
             </button>
+
             {showGptSearch && (
               <select
                 name="Language"
@@ -150,7 +155,7 @@ const Header = () => {
                           className="text-center border-t-[0.5px] border-gray-500 mt-4  tracking-wide hover:underline decoration-1 cursor-pointer"
                           onClick={handleSignOut}
                         >
-                          Sign out
+                          {lang[language].signOutBtn}
                         </li>
                       </ul>
                     </div>

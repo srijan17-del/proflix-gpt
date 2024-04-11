@@ -1,6 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Browse from "./Browse";
 import Login from "./Login";
+// import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
+// import GptSearchPage from "./GptSearchPage";
 
 const Body = () => {
   // const dispatch = useDispatch();
@@ -13,6 +15,7 @@ const Body = () => {
     {
       path: "/browse",
       element: <Browse />,
+      // loader: useNowPlayingMovies,
     },
   ]);
   /** */
