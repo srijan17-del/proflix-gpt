@@ -15,9 +15,9 @@ const VideoBg = ({ id, adult }) => {
   }
 
   return (
-    <div className="w-full h-[130vh] overflow-hidden">
+    <div className="w-full md:h-[130vh] h-[50vh] overflow-hidden">
       <iframe
-        className="w-full aspect-video relative scale-y-[1.33] scale-x-125 "
+        className="w-full md:aspect-video md:h-auto h-96 relative md:scale-y-[1.33] scale-y-[1.33] scale-x-125 "
         src={
           "https://www.youtube.com/embed/" +
           movieTrailer.key +
@@ -30,7 +30,7 @@ const VideoBg = ({ id, adult }) => {
         frameBorder="0"
         allowFullScreen
       ></iframe>
-      <div className="absolute right-0 top-[22rem] bg-black/35 py-2 pl-2 pr-10 border-l-2 border-white text-white">
+      <div className="absolute right-0 md:top-[22rem] top-[17rem] bg-black/35 py-2 pl-2 md:pr-10 pr-5 border-l-2 border-white text-white">
         {movieAudience}
       </div>
     </div>

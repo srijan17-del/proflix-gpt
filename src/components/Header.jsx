@@ -78,17 +78,21 @@ const Header = () => {
       {userProfile ? (
         <div className="flex absolute  box-border ">
           <div
-            className={` w-screen box-border pl-5 py-2 h-[5rem]  flex items-center justify-between 
-          -ml-[1.2rem] ${
-            showHeaderSolid
-              ? "bg-black/90 fixed z-[32] duration-300"
-              : "bg-gradient-to-b from-[#0B0B0B] duration-700 fixed z-30"
-          }`}
+            className={` w-screen box-border pl-5 py-2 md:h-[5rem] h-[9rem]  flex  items-center justify-between 
+           ${
+             showHeaderSolid
+               ? "bg-black/90 fixed z-[32] duration-300"
+               : "bg-gradient-to-b from-[#0B0B0B] duration-700 fixed z-30"
+           }`}
           >
-            <img src={Logo} alt="logo" className="w-[10rem] ml-14 mt-5  " />
+            <img
+              src={Logo}
+              alt="logo"
+              className="md:w-[10rem] w-[13rem] ml-[28%] md:mt-5 -mt-[2rem] md:ml-14 "
+            />
 
             <RiOpenaiFill
-              className="peer text-white z-20 absolute right-44 top-7 cursor-pointer hover:animate-pulse  text-shadow-lg active:text-red-800 duration-300"
+              className="peer text-white z-20 absolute right-44 md:top-7 top-[5.7rem] cursor-pointer hover:animate-pulse  text-shadow-lg active:text-red-800 duration-300"
               size={"2.5rem"}
               onClick={() => {
                 dispatch(toggleGptSearch(true));
@@ -96,7 +100,7 @@ const Header = () => {
             />
 
             <button
-              className=" absolute opacity-0 z-10 right-36 top-[2rem] border-y-[3px] border-l-[3px] py-1 pr-2 pl-1 text-white peer-hover:-translate-x-16
+              className=" absolute opacity-0 z-10 right-36 md:top-[2rem] top-[6rem] border-y-[3px] border-l-[3px] py-1 pr-2 pl-1 text-white peer-hover:-translate-x-16
             peer-hover:opacity-100 duration-100 ease-in-out text-shadow-lg shadow-lg text-sm font-medium tracking-wider border-red-800 flex items-center gap-1
             "
             >
@@ -112,7 +116,7 @@ const Header = () => {
                 onChange={(e) => {
                   dispatch(changeLanguage(e.target.value));
                 }}
-                className="absolute right-80 top-[2rem] px-2 py-1 cursor-pointer shadow-lg 
+                className="absolute right-80 md:top-[2rem] top-[6rem] px-2 py-1 cursor-pointer shadow-lg 
               rounded tracking-tight opacity-95  bg-[#0970E6] text-white"
               >
                 {SUPP_LANG.map((lang) => (
@@ -128,7 +132,7 @@ const Header = () => {
                   <img
                     src="https://occ-0-6245-2186.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTZ2zlLdBVC05fsd2YQAR43J6vB1NAUBOOrxt7oaFATxMhtdzlNZ846H3D8TZzooe2-FT853YVYs8p001KVFYopWi4D4NXM.png?r=229"
                     alt=""
-                    className="w-9 rounded box-border mr-20 mt-5 "
+                    className="w-9 rounded box-border mr-20 md:mt-5 mt-[5rem]"
                   />
                 </Menu.Button>
                 <Transition
@@ -141,10 +145,10 @@ const Header = () => {
                 >
                   <Menu.Items>
                     <TiArrowSortedUp
-                      className="text-black  absolute right-[5rem] top-12 mt-[0.65rem] "
+                      className="text-black  absolute right-[5rem] md:top-12 mt-[0.65rem] "
                       size={"1.8rem"}
                     />
-                    <div className="w-40 h-auto pt-4  pb-2 px-2 mt-[1.8rem] bg-black absolute right-[3rem] top-12 opacity-80">
+                    <div className="w-40 h-auto pt-4  pb-2 px-2 mt-[1.8rem] bg-black absolute right-[3rem] md:top-12 opacity-80">
                       <ul className="text-white">
                         <li className="flex items-center gap-2 hover:underline decoration-1 cursor-pointer">
                           <CiUser />
@@ -167,7 +171,7 @@ const Header = () => {
         </div>
       ) : (
         <img
-          className="absolute z-40 w-48 ml-24 mt-2 cursor-pointer "
+          className="absolute z-40 w-48 md:ml-24 right-[32%] md:left-0 mt-2 cursor-pointer "
           src={Logo}
           alt="netflix-Logo"
         />

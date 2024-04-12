@@ -6,7 +6,7 @@ const GptMovieSuggestions = () => {
 
   console.log(movieResults);
   return (
-    <div className="bg-[#141414] w-full absolute z-30 -mt-96 ">
+    <div className="bg-[#141414] w-full absolute z-30 md:-mt-96 -mt-[40rem]">
       <div className=" overflow-hidden w-full  pl-7 mt-4">
         {movieNames.map((movieName, index) => (
           <MovieList

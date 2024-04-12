@@ -4,8 +4,8 @@ import ShowMoreText from "react-show-more-text";
 
 const VideoTitle = ({ title, overview }) => {
   return (
-    <div className="w-[30rem] left-7 top-[15rem]  absolute aspect-video  ">
-      <h1 className="text-3xl font-bold text-shadow-lg shadow-black/65 text-white">
+    <div className="md:w-[30rem] w-auto left-7 md:top-[18rem] top-[14rem] absolute aspect-video  ">
+      <h1 className="md:text-3xl text-2xl font-bold text-shadow-lg shadow-black/65 text-white">
         {title}
       </h1>
       <ShowMoreText
@@ -16,16 +16,18 @@ const VideoTitle = ({ title, overview }) => {
         expanded={false}
         width={400}
         truncatedEndingComponent={"... "}
-        className="content-css text-[1.02rem] text-shadow-lg shadow-black/65 text-white    font-medium cursor-pointer text-left  "
+        className="hidden md:inline-block content-css text-[1.02rem] text-shadow-lg shadow-black/65 text-white font-medium cursor-pointer text-left "
       >
-        {overview}
+        <p className="hidden md:inline-block content-css text-[1.02rem] text-shadow-lg shadow-black/65 text-white font-medium cursor-pointer text-left ">
+          {overview}
+        </p>
       </ShowMoreText>
       <div className="flex gap-5 mt-4">
-        <button className="w-auto h-auto px-8 py-2 text-lg bg-white font-medium flex gap-1 items-center rounded opacity-85 hover:bg-white/75 tracking-wide">
+        <button className="w-auto md:h-auto md:px-8 px-3 py-2 md:text-lg bg-white font-medium flex gap-1 items-center rounded opacity-85 hover:bg-white/75 tracking-wide">
           <FaPlay />
           Play
         </button>
-        <button className="w-auto h-auto px-8 py-2 text-lg bg-gray-500 font-medium flex gap-1 items-center rounded tracking-wide text-white hover:bg-slate-400 opacity-85">
+        <button className="w-auto md:h-auto md:px-8 px-3 py-2 md:text-lg bg-gray-500 font-medium flex gap-1 items-center rounded tracking-wide text-white hover:bg-slate-400 opacity-85">
           <IoIosInformationCircleOutline />
           Info
         </button>
