@@ -25,7 +25,7 @@ const GptSearchBar = () => {
   };
 
   const handleSearch = async () => {
-    console.log(searchText.current.value);
+    // console.log(searchText.current.value);
     const gptQuery =
       "Act as a Movie Recommendation system and suggest some movies for the query : " +
       searchText.current.value +
@@ -41,7 +41,7 @@ const GptSearchBar = () => {
     // console.log(text);
     const geMovies = text.split(",");
     //convert prompt result to array
-    console.log(geMovies);
+    // console.log(geMovies);
 
     // search tmdp for movies
 
@@ -49,7 +49,7 @@ const GptSearchBar = () => {
     // console.log(promiseArray);
 
     const geMoviesArr = await Promise.all(promiseArray);
-    console.log(geMoviesArr);
+    // console.log(geMoviesArr);
     // push movies to store
     dispatch(addGptMovies({ movieNames: geMovies, movieResults: geMoviesArr }));
   };
